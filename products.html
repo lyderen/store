@@ -1,0 +1,29 @@
+
+
+      
+    <h3 layout-align="center">ITems</h3>
+      <div  layout="row" layout-wrap="" >   
+       
+
+         <div class="card-it" flex="30" layout-margin ng-repeat="item in  $ctrl.listItems"  
+              ng-click="$ctrl.handelItem(item)">
+               
+                    <img src="card-image.png" class="md-card-image" alt="image caption">
+                    <h2> {{item}}</h2>
+      </div> 
+        
+    </div>   
+ 
+ 
+ 
+
+
+ <style>
+    .card-it{
+       border:1px solid  rgba(10, 10, 10, 0.3);
+    }
+ 
+ 
+ </style>
+
+

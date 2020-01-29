@@ -1,0 +1,50 @@
+<md-content>
+<md-card>
+
+
+
+    <div  layout="column" layout-wrap="" >   
+       
+
+        <div class="card-it"  layout-margin ng-repeat="item in  $ctrl.cart"  >
+              
+                   <img src="card-image.png" class="md-card-image" alt="image caption">
+                   <h2> מוצר: {{item.name}}</h2>
+                   <h3>כמות : {{item.count}}</h3>
+     </div> 
+       
+   </div>
+    
+ 
+
+    
+
+      <p> Total:  {{$ctrl.totalPrice}}</p>
+
+
+      <div layout="row" layout-align="space-between center">
+        <span>Waht contry To ship(tax calculation) ?</span>
+        <md-select ng-model="$ctrl.tax" placeholder="TAX" class="md-no-underline">
+          <md-option value="0">IL</md-option>
+          <md-option value="1">USA</md-option>
+          <md-option value="2">EU</md-option>
+          <md-option value="3">EN</md-option>
+         
+        </md-select>
+      </div>
+
+    <md-button class="md-raised md primary" ng-click="$ctrl.handelCheckOut()"> Calc</md-button>
+</md-card>   
+    
+</md-content>
+
+
+
+<style>
+ .card-it{
+       border:1px solid  rgba(10, 10, 10, 0.3);
+    }
+ 
+
+
+</style>

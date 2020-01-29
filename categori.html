@@ -1,0 +1,38 @@
+
+
+<md-content>
+    <div  >
+        <md-button class="md-button md-ink-ripple" type="button" layout="row"> 
+        
+            <md-card  flex="20"  ng-repeat="cat in  $ctrl.categoris"   >
+                <img src="card-image.png" class="md-card-image" alt="image caption">
+                <md-card-content ng-click="$ctrl.handelCategori(cat)">
+                    <h2> {{cat}}</h2>
+                    
+                </md-card-content>      
+            </md-card>
+        </md-button> 
+    </div>
+   
+
+
+    <!-- <div flex layout="row"  style="width: 600px;height: 600px;">
+ 
+        <div flex="100" style="background-color: chartreuse;">
+   
+        </div>             
+     <div flex="100" style="background-color: blue;">
+   
+   
+     </div>
+   
+     <div flex="100" style="background-color: antiquewhite;">
+    
+     </div>
+    </div> -->
+    
+    
+    <products list-Items="$ctrl.items" cart-Items="$ctrl.cartItems">
+        
+    </products>
+</md-content>
